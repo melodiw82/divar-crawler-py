@@ -1,0 +1,1 @@
+# cities are used in the url => https://divar.ir/s/tehran/

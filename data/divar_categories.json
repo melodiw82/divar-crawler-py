@@ -1,0 +1,1068 @@
+[
+  {
+    "main": "املاک",
+    "main_href": "real-estate",
+    "subs": [
+      {
+        "name": "فروش مسکونی",
+        "href": "buy-residential",
+        "children": [
+          {
+            "name": "آپارتمان",
+            "href": "buy-apartment"
+          },
+          {
+            "name": "خانه و ویلا",
+            "href": "buy-villa"
+          },
+          {
+            "name": "زمین و ملک کلنگی",
+            "href": "buy-old-house"
+          }
+        ]
+      },
+      {
+        "name": "اجارهٔ مسکونی",
+        "href": "rent-residential",
+        "children": [
+          {
+            "name": "آپارتمان",
+            "href": "rent-apartment"
+          },
+          {
+            "name": "خانه و ویلا",
+            "href": "rent-villa"
+          }
+        ]
+      },
+      {
+        "name": "فروش اداری و تجاری",
+        "href": "buy-commercial-property",
+        "children": [
+          {
+            "name": "دفتر کار، اتاق اداری، مطب",
+            "href": "buy-office"
+          },
+          {
+            "name": "مغازه و غرفه",
+            "href": "buy-store"
+          },
+          {
+            "name": "صنعتی، کشاورزی، تجاری",
+            "href": "buy-industrial-agricultural-property"
+          }
+        ]
+      },
+      {
+        "name": "اجارهٔ اداری و تجاری",
+        "href": "rent-commercial-property",
+        "children": [
+          {
+            "name": "دفتر کار، اتاق اداری، مطب",
+            "href": "rent-office"
+          },
+          {
+            "name": "مغازه و غرفه",
+            "href": "rent-store"
+          },
+          {
+            "name": "صنعتی، کشاورزی، تجاری",
+            "href": "rent-industrial-agricultural-property"
+          }
+        ]
+      },
+      {
+        "name": "اجارهٔ کوتاه‌مدت",
+        "href": "rent-temporary",
+        "children": [
+          {
+            "name": "آپارتمان و سوئیت",
+            "href": "rent-temporary-suite-apartment"
+          },
+          {
+            "name": "ویلا و باغ",
+            "href": "rent-temporary-villa"
+          },
+          {
+            "name": "دفتر کار و فضای آموزشی",
+            "href": "rent-temporary-workspace"
+          }
+        ]
+      },
+      {
+        "name": "پروژه‌های ساخت‌وساز",
+        "href": "real-estate-services",
+        "children": [
+          {
+            "name": "مشارکت در ساخت",
+            "href": "contribution-construction"
+          },
+          {
+            "name": "پیش‌فروش",
+            "href": "pre-sell-home"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "main": "وسایل نقلیه",
+    "main_href": "vehicles",
+    "subs": [
+      {
+        "name": "خودرو",
+        "href": "auto",
+        "children": [
+          {
+            "name": "سواری و وانت",
+            "href": "car"
+          },
+          {
+            "name": "کلاسیک",
+            "href": "classic-car"
+          },
+          {
+            "name": "اجاره‌ای",
+            "href": "rental-car"
+          },
+          {
+            "name": "سنگین",
+            "href": "heavy-car"
+          }
+        ]
+      },
+      {
+        "name": "موتورسیکلت",
+        "href": "motorcycles",
+        "children": []
+      },
+      {
+        "name": "قطعات یدکی و لوازم جانبی",
+        "href": "car-accessories",
+        "children": []
+      },
+      {
+        "name": "قایق و سایر وسایل نقلیه",
+        "href": "boat",
+        "children": []
+      }
+    ]
+  },
+  {
+    "main": "کالای دیجیتال",
+    "main_href": "electronic-devices",
+    "subs": [
+      {
+        "name": "موبایل و تبلت",
+        "href": "mobile-tablet",
+        "children": [
+          {
+            "name": "موبایل",
+            "href": "mobile-phones"
+          },
+          {
+            "name": "تبلت",
+            "href": "tablet"
+          },
+          {
+            "name": "لوازم جانبی موبایل و تبلت",
+            "href": "mobile-tablet-accessories"
+          },
+          {
+            "name": "سیم‌کارت",
+            "href": "sim-card"
+          }
+        ]
+      },
+      {
+        "name": "رایانه",
+        "href": "computers",
+        "children": [
+          {
+            "name": "رایانه همراه",
+            "href": "laptop-notebook-macbook"
+          },
+          {
+            "name": "رایانه رومیزی",
+            "href": "desktop-computer"
+          },
+          {
+            "name": "قطعات و لوازم جانبی",
+            "href": "computer-parts-accessories"
+          },
+          {
+            "name": "مودم و تجهیزات شبکه",
+            "href": "modem-network-equipments"
+          },
+          {
+            "name": "پرینتر، اسکنر، کپی، فکس",
+            "href": "printer-scanner-fax"
+          }
+        ]
+      },
+      {
+        "name": "کنسول، بازی‌ ویدئویی و آنلاین",
+        "href": "game-consoles",
+        "children": []
+      },
+      {
+        "name": "صوتی و تصویری",
+        "href": "video-audio-device",
+        "children": [
+          {
+            "name": "فیلم و موسیقی",
+            "href": "film-music"
+          },
+          {
+            "name": "دوربین عکاسی و فیلم‌برداری",
+            "href": "camera"
+          },
+          {
+            "name": "پخش‌کننده همراه",
+            "href": "headphone-speaker-microphone"
+          },
+          {
+            "name": "سیستم صوتی خانگی",
+            "href": "home-audio-system"
+          },
+          {
+            "name": "پخش‌کننده DVD و ویدیو",
+            "href": "dvd-bluray-player"
+          },
+          {
+            "name": "تلویزیون و پروژکتور",
+            "href": "tv-projector"
+          },
+          {
+            "name": "دوربین مداربسته",
+            "href": "cctv"
+          }
+        ]
+      },
+      {
+        "name": "تلفن رومیزی",
+        "href": "telephone",
+        "children": []
+      }
+    ]
+  },
+  {
+    "main": "خانه و آشپزخانه",
+    "main_href": "home-kitchen",
+    "subs": [
+      {
+        "name": "لوازم خانگی برقی",
+        "href": "appliance",
+        "children": [
+          {
+            "name": "یخچال و فریزر",
+            "href": "refrigerator-freezer"
+          },
+          {
+            "name": "آب‌سردکن و تصفیه آب",
+            "href": "water-cooler-refinery"
+          },
+          {
+            "name": "ماشین لباسشویی و خشک‌کن لباس",
+            "href": "washing-machines"
+          },
+          {
+            "name": "ماشین ظرفشویی",
+            "href": "dishwasher"
+          },
+          {
+            "name": "جاروبرقی، جارو شارژی، بخارشو",
+            "href": "vacuums-cleaner"
+          },
+          {
+            "name": "اتو و لوازم اتو",
+            "href": "steam-iron"
+          },
+          {
+            "name": "آبمیوه‌گیر و آب‌مرکبات‌گیر",
+            "href": "juicers"
+          },
+          {
+            "name": "خردکن، آسیاب، غذاساز",
+            "href": "food-mill"
+          },
+          {
+            "name": "سماور، چای‌ساز، قهوه‌ساز",
+            "href": "drink-maker"
+          },
+          {
+            "name": "اجاق گاز و لوازم برقی پخت‌وپز",
+            "href": "oven-baking-appliances"
+          },
+          {
+            "name": "هود",
+            "href": "range-hood"
+          },
+          {
+            "name": "سایر لوازم برقی",
+            "href": "other-appliances"
+          }
+        ]
+      },
+      {
+        "name": "ظروف و لوازم آشپزخانه",
+        "href": "kitchen-utensils",
+        "children": [
+          {
+            "name": "سفره، حوله، دستمال آشپزخانه",
+            "href": "tablecloths"
+          },
+          {
+            "name": "آب‌چکان و نظم‌دهنده ظروف",
+            "href": "container-organizers"
+          },
+          {
+            "name": "قوری، کتری، قهوه‌ساز دستی",
+            "href": "pot-kettle"
+          },
+          {
+            "name": "ظروف سرو و پذیرایی",
+            "href": "home-catering"
+          },
+          {
+            "name": "ظروف نگهدارنده، پلاستیکی، یک‌بارمصرف",
+            "href": "containers"
+          },
+          {
+            "name": "ظروف پخت‌وپز",
+            "href": "cooking-utensils"
+          }
+        ]
+      },
+      {
+        "name": "خوردنی و آشامیدنی",
+        "href": "food-and-drink",
+        "children": []
+      },
+      {
+        "name": "خیاطی و بافتنی",
+        "href": "sewing-knitting",
+        "children": [
+          {
+            "name": "چرخ خیاطی و ریسندگی",
+            "href": "sewing-machine"
+          },
+          {
+            "name": "لوازم خیاطی و بافتنی",
+            "href": "sewing-accessories"
+          }
+        ]
+      },
+      {
+        "name": "مبلمان و صنایع چوب",
+        "href": "furniture-wood",
+        "children": [
+          {
+            "name": "مبلمان خانگی و میز عسلی",
+            "href": "furniture"
+          },
+          {
+            "name": "میز و صندلی غذاخوری",
+            "href": "dining-table"
+          },
+          {
+            "name": "بوفه، ویترین، کنسول",
+            "href": "buffet-showcases"
+          },
+          {
+            "name": "کتابخانه، شلف، قفسه‌های دیواری",
+            "href": "bookcase-shelf"
+          },
+          {
+            "name": "جاکفشی، کمد، دراور",
+            "href": "shoe-rack-drawer"
+          },
+          {
+            "name": "تخت و سرویس خواب",
+            "href": "bed-service"
+          },
+          {
+            "name": "میز تلفن",
+            "href": "phone-desk"
+          },
+          {
+            "name": "میز تلویزیون",
+            "href": "tv-stand"
+          },
+          {
+            "name": "میز تحریر و کامپیوتر",
+            "href": "desk"
+          },
+          {
+            "name": "مبلمان اداری",
+            "href": "office-decoration"
+          },
+          {
+            "name": "صندلی و نیمکت",
+            "href": "chair-bench"
+          }
+        ]
+      },
+      {
+        "name": "نور و روشنایی",
+        "href": "home-lighting",
+        "children": [
+          {
+            "name": "لوستر و چراغ آویز",
+            "href": "chandeliers"
+          },
+          {
+            "name": "چراغ خواب و آباژور",
+            "href": "lampshade"
+          },
+          {
+            "name": "ریسه و چراغ تزئینی",
+            "href": "yarn-lights"
+          },
+          {
+            "name": "لامپ و چراغ",
+            "href": "lamps"
+          }
+        ]
+      },
+      {
+        "name": "فرش، گلیم، موکت",
+        "href": "carpet-moquette",
+        "children": [
+          {
+            "name": "فرش",
+            "href": "carpet"
+          },
+          {
+            "name": "تابلو فرش",
+            "href": "pictorial-carpet"
+          },
+          {
+            "name": "روفرشی",
+            "href": "rubber-carpet"
+          },
+          {
+            "name": "پادری",
+            "href": "mat"
+          },
+          {
+            "name": "موکت",
+            "href": "moquette"
+          },
+          {
+            "name": "گلیم، جاجیم، گبه",
+            "href": "rugs-woolen-cloth"
+          },
+          {
+            "name": "پشتی",
+            "href": "lumbar-pillow"
+          }
+        ]
+      },
+      {
+        "name": "تشک، روتختی، رختخواب",
+        "href": "sleep-goods",
+        "children": [
+          {
+            "name": "رختخواب، بالش، پتو",
+            "href": "bed-pillow-blanket"
+          },
+          {
+            "name": "تشک تختخواب",
+            "href": "mattress"
+          },
+          {
+            "name": "سرویس روتختی",
+            "href": "bed-sheet"
+          }
+        ]
+      },
+      {
+        "name": "لوازم دکوری و تزئینی",
+        "href": "decoration",
+        "children": [
+          {
+            "name": "پرده، رانر، رومیزی",
+            "href": "curtains-table-cover"
+          },
+          {
+            "name": "آینه",
+            "href": "mirror"
+          },
+          {
+            "name": "ساعت دیواری و تزئینی",
+            "href": "wall-clock"
+          },
+          {
+            "name": "تابلو، نقاشی، عکس",
+            "href": "paintings-picture"
+          },
+          {
+            "name": "مجسمه، تندیس، ماکت",
+            "href": "figurines"
+          },
+          {
+            "name": "گل مصنوعی",
+            "href": "artificial-flower"
+          },
+          {
+            "name": "گل و گیاه طبیعی",
+            "href": "natural-plants"
+          },
+          {
+            "name": "صنایع دستی و سایر لوازم تزئینی",
+            "href": "crafts"
+          }
+        ]
+      },
+      {
+        "name": "تهویه، سرمایش، گرمایش",
+        "href": "ventilation-cooling-heating",
+        "children": [
+          {
+            "name": "آبگرمکن، پکیج، شوفاژ",
+            "href": "water-heater-package-radiator"
+          },
+          {
+            "name": "بخاری، هیتر، شومینه",
+            "href": "stoves-heaters-fireplaces"
+          },
+          {
+            "name": "کولر آبی",
+            "href": "water-cooler"
+          },
+          {
+            "name": "کولر گازی و فن کویل",
+            "href": "air-conditioning-fan-coil"
+          },
+          {
+            "name": "پنکه و تصویه کننده هوا",
+            "href": "fan-ventilator-humidifier"
+          }
+        ]
+      },
+      {
+        "name": "شست شو و نظافت",
+        "href": "washing-cleaning",
+        "children": [
+          {
+            "name": "مواد شوینده و دستمال کاغذی",
+            "href": "detergent-tissue"
+          },
+          {
+            "name": "لوازم نظافت",
+            "href": "cleaning-supplies"
+          },
+          {
+            "name": "بندرخت و رخت آویز",
+            "href": "clothes-rack"
+          }
+        ]
+      },
+      {
+        "name": "حمام و سرویس بهداشتی",
+        "href": "bathrooms",
+        "children": [
+          {
+            "name": "لوازم حمام",
+            "href": "bathroom-accessories"
+          },
+          {
+            "name": "لوازم سرویس بهداشتی",
+            "href": "wc-accessories"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "main": "خدمات",
+    "main_href": "services",
+    "subs": [
+      {
+        "name": "موتور و ماشین",
+        "href": "vehicles-services",
+        "children": []
+      },
+      {
+        "name": "پذیرایی، مراسم",
+        "href": "catering-services",
+        "children": []
+      },
+      {
+        "name": "رایانه‌ای و موبایل",
+        "href": "technology-services",
+        "children": []
+      },
+      {
+        "name": "مالی، حسابداری، بیمه",
+        "href": "financial-services",
+        "children": []
+      },
+      {
+        "name": "حمل و نقل",
+        "href": "transport-logistic-services",
+        "children": []
+      },
+      {
+        "name": "پیشه و مهارت",
+        "href": "craft-skill-services",
+        "children": []
+      },
+      {
+        "name": "آرایشگری و زیبایی",
+        "href": "beauty-services",
+        "children": []
+      },
+      {
+        "name": "نظافت",
+        "href": "cleaning-services",
+        "children": []
+      },
+      {
+        "name": "باغبانی و درختکاری",
+        "href": "gardening-services",
+        "children": []
+      },
+      {
+        "name": "آموزشی",
+        "href": "teaching-services",
+        "children": []
+      }
+    ]
+  },
+  {
+    "main": "وسایل شخصی",
+    "main_href": "personal-goods",
+    "subs": [
+      {
+        "name": "کیف، کفش، لباس",
+        "href": "apparel",
+        "children": [
+          {
+            "name": "کیف، کفش، کمربند",
+            "href": "bag-shoes-belt"
+          },
+          {
+            "name": "لباس",
+            "href": "clothing"
+          }
+        ]
+      },
+      {
+        "name": "زیورآلات و اکسسوری",
+        "href": "accessories",
+        "children": [
+          {
+            "name": "ساعت",
+            "href": "watches"
+          },
+          {
+            "name": "جواهرات",
+            "href": "jewellery"
+          },
+          {
+            "name": "بدلیجات",
+            "href": "trinket"
+          }
+        ]
+      },
+      {
+        "name": "آرایشی، بهداشتی، درمانی",
+        "href": "beauty-and-personal-care",
+        "children": []
+      },
+      {
+        "name": "کفش و لباس بچه",
+        "href": "child-apparel",
+        "children": []
+      },
+      {
+        "name": "وسایل بچه و اسباب‌بازی",
+        "href": "child-products",
+        "children": [
+          {
+            "name": "اسباب‌بازی بچه",
+            "href": "child-toys"
+          },
+          {
+            "name": "کالسکه و لوازم جانبی",
+            "href": "stroller"
+          },
+          {
+            "name": "تخت و صندلی بچه",
+            "href": "child-furniture"
+          },
+          {
+            "name": "اسباب و اثاث بچه",
+            "href": "child-stuff"
+          }
+        ]
+      },
+      {
+        "name": "لوازم التحریر",
+        "href": "stationery",
+        "children": []
+      }
+    ]
+  },
+  {
+    "main": "سرگرمی و فراغت",
+    "main_href": "entertainment",
+    "subs": [
+      {
+        "name": "بلیت",
+        "href": "ticket",
+        "children": [
+          {
+            "name": "کنسرت",
+            "href": "concert-ticket"
+          },
+          {
+            "name": "تئاتر و سینما",
+            "href": "theatre-cinema-ticket"
+          },
+          {
+            "name": "کارت هدیه و تخفیف",
+            "href": "discount-gift-card"
+          },
+          {
+            "name": "مسابقه‌ها و مکان‌های ورزشی",
+            "href": "match-sport-ticket"
+          },
+          {
+            "name": "ورزشی",
+            "href": "sport-ticket"
+          },
+          {
+            "name": "اتوبوس، مترو، قطار",
+            "href": "travel-ticket"
+          }
+        ]
+      },
+      {
+        "name": "تور و چارتر",
+        "href": "tours",
+        "children": []
+      },
+      {
+        "name": "کتاب و مجله",
+        "href": "publication",
+        "children": [
+          {
+            "name": "آموزشی",
+            "href": "educational-book"
+          },
+          {
+            "name": "ادبی",
+            "href": "literary-book"
+          },
+          {
+            "name": "تاریخی",
+            "href": "historical-book"
+          },
+          {
+            "name": "مذهبی",
+            "href": "religious-book"
+          },
+          {
+            "name": "مجلات",
+            "href": "magazine"
+          }
+        ]
+      },
+      {
+        "name": "دوچرخه، اسکیت، اسکوتر",
+        "href": "bike-skate-scooter",
+        "children": []
+      },
+      {
+        "name": "حیوانات",
+        "href": "pets-animals",
+        "children": [
+          {
+            "name": "گربه",
+            "href": "cats"
+          },
+          {
+            "name": "موش و خرگوش",
+            "href": "rodents"
+          },
+          {
+            "name": "خزنده",
+            "href": "reptiles"
+          },
+          {
+            "name": "پرنده",
+            "href": "birds"
+          },
+          {
+            "name": "ماهی",
+            "href": "fishes"
+          },
+          {
+            "name": "لوازم جانبی",
+            "href": "pet-supplies"
+          },
+          {
+            "name": "حیوانات مزرعه",
+            "href": "farm-animals"
+          },
+          {
+            "name": "سگ",
+            "href": "dogs"
+          }
+        ]
+      },
+      {
+        "name": "کلکسیون و سرگرمی",
+        "href": "collecting",
+        "children": [
+          {
+            "name": "سکه، تمبر، اسکناس",
+            "href": "stamp-coin-collecting"
+          },
+          {
+            "name": "اشیاء عتیقه",
+            "href": "antique-objects"
+          }
+        ]
+      },
+      {
+        "name": "آلات موسیقی",
+        "href": "musical-instruments",
+        "children": [
+          {
+            "name": "گیتار، بیس، امپلیفایر",
+            "href": "guitars"
+          },
+          {
+            "name": "سازهای بادی",
+            "href": "wind-instrument"
+          },
+          {
+            "name": "پیانو، کیبورد، آکاردئون",
+            "href": "organ-piano-accordion"
+          },
+          {
+            "name": "سازهای سنتی",
+            "href": "iranian-instruments"
+          },
+          {
+            "name": "درام و پرکاشن",
+            "href": "percussion-instruments"
+          },
+          {
+            "name": "ویولن",
+            "href": "violins"
+          }
+        ]
+      },
+      {
+        "name": "ورزش و تناسب اندام",
+        "href": "sport-entertainment",
+        "children": [
+          {
+            "name": "ورزش‌های توپی",
+            "href": "ball-sports"
+          },
+          {
+            "name": "کوهنوردی و کمپینگ",
+            "href": "mountaineering-camping"
+          },
+          {
+            "name": "غواصی و ورزش‌های آبی",
+            "href": "water-sports"
+          },
+          {
+            "name": "ماهیگیری",
+            "href": "fishing"
+          },
+          {
+            "name": "تجهیزات ورزشی",
+            "href": "sport-equipment"
+          },
+          {
+            "name": "ورزش‌های زمستانی",
+            "href": "winter-sports"
+          },
+          {
+            "name": "اسب و تجهیزات اسب‌سواری",
+            "href": "horse-riding"
+          }
+        ]
+      },
+      {
+        "name": "اسباب‌‌بازی",
+        "href": "game-and-toys",
+        "children": []
+      }
+    ]
+  },
+  {
+    "main": "اجتماعی",
+    "main_href": "social-services",
+    "subs": [
+      {
+        "name": "رویداد",
+        "href": "event",
+        "children": [
+          {
+            "name": "حراج",
+            "href": "auction"
+          },
+          {
+            "name": "گردهمایی و همایش",
+            "href": "seminars-conference"
+          },
+          {
+            "name": "ورزشی",
+            "href": "events-sports"
+          }
+        ]
+      },
+      {
+        "name": "داوطلبانه",
+        "href": "voluntary",
+        "children": [
+          {
+            "name": "تحقیقاتی",
+            "href": "education-research-partner"
+          }
+        ]
+      },
+      {
+        "name": "گم‌شده‌ها",
+        "href": "missing",
+        "children": [
+          {
+            "name": "حیوانات",
+            "href": "lost-animals"
+          },
+          {
+            "name": "اشیا",
+            "href": "lost-objects"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "main": "تجهیزات و صنعتی",
+    "main_href": "tools-materials-equipment",
+    "subs": [
+      {
+        "name": "مصالح و تجهیزات ساختمان",
+        "href": "building-equipment",
+        "children": []
+      },
+      {
+        "name": "ابزارآلات",
+        "href": "toolbox",
+        "children": []
+      },
+      {
+        "name": "ماشین‌آلات صنعتی",
+        "href": "industrial-machinery",
+        "children": []
+      },
+      {
+        "name": "تجهیزات کسب‌وکار",
+        "href": "work-equipment",
+        "children": [
+          {
+            "name": "پزشکی",
+            "href": "medical-equipment"
+          },
+          {
+            "name": "فروشگاه و مغازه",
+            "href": "store-equipment"
+          },
+          {
+            "name": "کافی‌شاپ و رستوران",
+            "href": "restaurant-equipment"
+          },
+          {
+            "name": "آرایشگاه و سالن‌های زیبایی",
+            "href": "barber-shop-equipment"
+          },
+          {
+            "name": "دفتر کار",
+            "href": "office-equipment"
+          }
+        ]
+      },
+      {
+        "name": "عمده‌فروشی",
+        "href": "wholesale",
+        "children": []
+      }
+    ]
+  },
+  {
+    "main": "استخدام و کاریابی",
+    "main_href": "jobs",
+    "subs": [
+      {
+        "name": "اداری و مدیریت",
+        "href": "administrative-jobs",
+        "children": []
+      },
+      {
+        "name": "سرایداری و نظافت",
+        "href": "janitorial-jobs",
+        "children": []
+      },
+      {
+        "name": "معماری، عمران و ساختمانی",
+        "href": "architect-jobs",
+        "children": []
+      },
+      {
+        "name": "خدمات فروشگاه و رستوران",
+        "href": "service-jobs",
+        "children": []
+      },
+      {
+        "name": "رایانه و فناوری اطلاعات",
+        "href": "it-computer-jobs",
+        "children": []
+      },
+      {
+        "name": "مالی، حسابداری، حقوقی",
+        "href": "finance-legal-jobs",
+        "children": []
+      },
+      {
+        "name": "بازاریابی و فروش",
+        "href": "marketing-jobs",
+        "children": []
+      },
+      {
+        "name": "صنعتی، فنی، مهندسی",
+        "href": "technical-jobs",
+        "children": []
+      },
+      {
+        "name": "آموزشی",
+        "href": "teaching-jobs",
+        "children": []
+      },
+      {
+        "name": "حمل و نقل",
+        "href": "transport-delivery-jobs",
+        "children": []
+      },
+      {
+        "name": "درمانی، زیبایی، بهداشتی",
+        "href": "health-beauty-jobs",
+        "children": []
+      },
+      {
+        "name": "هنری و رسانه",
+        "href": "art-media-jobs",
+        "children": []
+      }
+    ]
+  }
+]
