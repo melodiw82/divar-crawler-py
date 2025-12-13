@@ -1,0 +1,9 @@
+==============================
+      INDEXING REPORT      
+==============================
+Docs Indexed : 11023
+Files Read   : 560
+Total Size   : 9.89 MB
+Time Taken   : 3.92 seconds
+Avg Speed    : 2810 docs/sec
+==============================

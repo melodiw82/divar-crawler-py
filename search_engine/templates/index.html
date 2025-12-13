@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>دیوار | موتور جستجو</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+
+        /* استایل نوار کناری */
+        .sidebar {
+            background: white;
+            min-height: 100vh;
+            padding: 20px;
+            border-left: 1px solid #dee2e6;
+        }
+
+        /* کارت نتایج */
+        .result-card {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .result-card:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-color: #a62626;
+            transform: translateY(-2px);
+        }
+
+        .result-title a {
+            text-decoration: none;
+            color: #1a0dab;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .result-title a:hover {
+            text-decoration: underline;
+        }
+
+        .price-tag {
+            color: #a62626;
+            font-weight: 800;
+            float: left;
+            font-size: 1.1rem;
+            background: #fff0f0;
+            padding: 2px 10px;
+            border-radius: 8px;
+        }
+
+        /* هایلایت کلمات */
+        mark {
+            background-color: #fff3cd;
+            padding: 0 2px;
+            border-radius: 4px;
+            color: #000;
+        }
+
+        /* بج‌های جزئیات */
+        .dynamic-badge {
+            background-color: #f1f3f5;
+            color: #495057;
+            font-size: 0.85rem;
+            padding: 4px 10px;
+            border-radius: 6px;
+            margin-left: 6px;
+            display: inline-block;
+            margin-top: 6px;
+        }
+
+        /* دکمه بیشتر */
+        .more-btn {
+            cursor: pointer;
+            color: #0d6efd;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-right: 5px;
+            text-decoration: none;
+        }
+
+        /* استایل درختی دسته‌بندی */
+        summary {
+            cursor: pointer;
+            padding: 8px;
+            font-weight: 500;
+            list-style: none; /* حذف مثلث پیش‌فرض */
+            position: relative;
+        }
+
+        summary::after {
+            content: '+';
+            position: absolute;
+            left: 10px;
+            font-weight: bold;
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        summary:hover {
+            color: #a62626;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+        }
+
+        .cat-item {
+            display: block;
+            padding: 6px 25px;
+            color: #555;
+            text-decoration: none;
+            font-size: 0.95rem;
+            border-right: 3px solid transparent;
+        }
+
+        .cat-item:hover {
+            color: #a62626;
+            background: #fff5f5;
+            border-right-color: #a62626;
+        }
+
+        .cat-item.active {
+            color: #a62626;
+            font-weight: bold;
+            border-right-color: #a62626;
+            background: #fff0f0;
+        }
+
+        /* باکس خوش‌آمدگویی */
+        .welcome-box {
+            text-align: center;
+            margin-top: 80px;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .welcome-box h1 {
+            font-size: 2.5rem;
+            color: #a62626;
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
+
+        .welcome-icon {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger sticky-top shadow-sm">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="/">
+            <span style="background: white; color: #dc3545; padding: 2px 8px; border-radius: 4px; margin-left: 5px;">دیوار</span>
+            موتور جستجو
+        </a>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3 col-lg-2 sidebar d-none d-md-block">
+
+            {% if filters.city or filters.cat %}
+            <div class="mb-4">
+                <a href="/?q={{ query }}" class="btn btn-outline-danger w-100 fw-bold shadow-sm">
+                    ❌ حذف تمام فیلترها
+                </a>
+            </div>
+            {% endif %}
+
+            <h6 class="text-secondary fw-bold mb-3 border-bottom pb-2"> شهر</h6>
+            <div class="list-group mb-5 shadow-sm rounded-3 overflow-hidden">
+                <a href="/?q={{query}}&category={{filters.cat}}"
+                   class="list-group-item list-group-item-action {% if not filters.city %}active bg-secondary border-secondary{% endif %}">
+                    همه شهرها
+                </a>
+                {% for c in ['یزد', 'تهران', 'اصفهان', 'مشهد'] %}
+                <a href="/?q={{query}}&category={{filters.cat}}&city={{c}}"
+                   class="list-group-item list-group-item-action {% if filters.city == c %}active bg-danger border-danger{% endif %}">
+                    {{ c }}
+                </a>
+                {% endfor %}
+            </div>
+
+            <h6 class="text-secondary fw-bold mb-3 border-bottom pb-2"> دسته‌بندی‌ها</h6>
+            <div style="max-height: 60vh; overflow-y: auto;">
+                {% macro render_tree(items) %}
+                {% for item in items %}
+                {% if item.subs or item.children %}
+                <details>
+                    <summary>{{ item.name or item.main }}</summary>
+                    <div class="ms-2 border-end pe-2">{{ render_tree(item.subs or item.children) }}</div>
+                </details>
+                {% else %}
+                <a href="/?q={{query}}&city={{filters.city}}&category={{item.href}}"
+                   class="cat-item {% if filters.cat == item.href %}active{% endif %}">
+                    {{ item.name }}
+                </a>
+                {% endif %}
+                {% endfor %}
+                {% endmacro %}
+
+                {{ render_tree(categories) }}
+            </div>
+        </div>
+
+        <div class="col-md-9 col-lg-10 py-4 px-md-5">
+
+            <form action="/" method="GET" class="row justify-content-center mb-5">
+                <input type="hidden" name="city" value="{{ filters.city }}">
+                <input type="hidden" name="category" value="{{ filters.cat }}">
+                <div class="col-md-10">
+                    <div class="input-group input-group-lg shadow-sm">
+                        <input type="text" name="q" class="form-control border-danger"
+                               placeholder="چی لازم داری؟ (مثلا: گوشی سامسونگ، اجاره خانه و...)"
+                               value="{{ query }}">
+                        <button class="btn btn-danger px-4 fw-bold" type="submit"> جستجو
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            {% if is_landing %}
+
+            <div class="welcome-box">
+                <span class="welcome-icon">🚀</span>
+                <h1>به موتور جستجوی دیوار خوش آمدید</h1>
+                <p class="lead text-muted">
+                    برای شروع، نام کالا یا خدمات مورد نظر خود را در کادر بالا بنویسید.<br>
+                </p>
+            </div>
+
+            {% else %}
+
+            {% if suggestion %}
+            <div class="alert alert-warning border-warning shadow-sm py-3 mb-4 d-flex align-items-center">
+                <span class="fs-3 me-3">💡</span>
+                <div>
+                    {{ suggestion | safe }}
+                </div>
+            </div>
+            {% endif %}
+
+            {% if results %}
+            <div class="d-flex justify-content-between align-items-center mb-3 text-muted">
+                        <span>
+                            نتایج برای: <strong class="text-dark">{{ query }}</strong>
+                        </span>
+                <small>
+                    یافت شده در {{ meta.took }} میلی‌ثانیه | {{ meta.total }} آگهی
+                </small>
+            </div>
+
+            {% for res in results %}
+            <div class="result-card">
+                <div class="clearfix mb-2">
+                    <span class="price-tag">{{ res.price }}</span>
+                    <h3 class="result-title h5 mb-0">
+                        <a href="{{ res.url }}" target="_blank">{{ res.title | safe }}</a>
+                    </h3>
+                </div>
+
+                <div class="meta-info mb-3">
+                    <span class="badge bg-secondary opacity-75">{{ res.city }}</span>
+                    <span class="badge bg-light text-dark border">{{ res.cat }}</span>
+                </div>
+
+                <div class="mb-3 text-dark text-opacity-75" style="line-height: 1.8; font-size: 0.95rem;">
+                            <span id="short-{{ loop.index }}">
+                                {{ res.desc | safe }}
+                            </span>
+                    <span id="full-{{ loop.index }}" style="display:none;">
+                                {{ res.full_desc | safe }}
+                            </span>
+
+                    {% if res.full_desc|length > 150 %}
+                    <a onclick="toggleText({{ loop.index }})" id="btn-{{ loop.index }}" class="more-btn ms-1">
+                        [بیشتر بخوانید]
+                    </a>
+                    {% endif %}
+                </div>
+
+                <div class="border-top pt-2">
+                    {% for key, val in res.details.items() %}
+                    {% if val|length < 40 %}
+                    <span class="dynamic-badge"><strong>{{ key }}:</strong> {{ val }}</span>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+
+            {% if meta.pages > 1 %}
+            <nav class="mt-5 pb-5">
+                <ul class="pagination justify-content-center">
+                    {% if meta.page > 1 %}
+                    <li class="page-item">
+                        <a class="page-link text-danger"
+                           href="/?q={{query}}&city={{filters.city}}&category={{filters.cat}}&page={{meta.page - 1}}">
+                            قبلی
+                        </a>
+                    </li>
+                    {% endif %}
+
+                    <li class="page-item disabled">
+                        <span class="page-link text-dark fw-bold">صفحه {{ meta.page }} از {{ meta.pages }}</span>
+                    </li>
+
+                    {% if meta.page < meta.pages %}
+                    <li class="page-item">
+                        <a class="page-link text-danger"
+                           href="/?q={{query}}&city={{filters.city}}&category={{filters.cat}}&page={{meta.page + 1}}">
+                            بعدی
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
+            {% endif %}
+
+            {% else %}
+            <div class="alert alert-secondary text-center py-5 mt-4">
+                <span class="d-block fs-1 mb-3">😕</span>
+                <h4 class="fw-bold">نتیجه‌ای یافت نشد!</h4>
+                <p class="mb-0">سعی کنید فیلتر شهر یا دسته بندی را حذف کنید یا کلمات کلیدی دیگری را جستجو کنید.</p>
+            </div>
+            {% endif %}
+
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleText(id) {
+        var shortText = document.getElementById("short-" + id);
+        var fullText = document.getElementById("full-" + id);
+        var btn = document.getElementById("btn-" + id);
+
+        if (shortText.style.display === "none") {
+            shortText.style.display = "inline";
+            fullText.style.display = "none";
+            btn.innerHTML = "[بیشتر بخوانید]";
+        } else {
+            shortText.style.display = "none";
+            fullText.style.display = "inline";
+            btn.innerHTML = "[بستن]";
+        }
+    }
+</script>
+
+</body>
+</html>
