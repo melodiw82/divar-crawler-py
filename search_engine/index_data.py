@@ -69,6 +69,7 @@ settings = {
                     }
                 }
             },
+            # N-gram برای توضیحات هم فعال است
             "description": {
                 "type": "text",
                 "analyzer": "persian_custom",
@@ -86,14 +87,18 @@ settings = {
         }
     }
 }
-es.indices.create(index=index_name, body=settings)
+
+es.indices.create(index=index_name, **settings)
+print(f"Index '{index_name}' created successfully.")
+
+json_files = [f for f in os.listdir(data_dir) if f.endswith(".json")]
+total_files_count = len(json_files)
+total_size_bytes = sum(os.path.getsize(os.path.join(data_dir, f)) for f in json_files)
+total_size_mb = total_size_bytes / (1024 * 1024)
 
 
 def generate_docs():
-    files = os.listdir(data_dir)
-    for filename in files:
-        if not filename.endswith(".json"): continue
-
+    for filename in json_files:
         city = "یزد"
         if filename.startswith("isfahan_"):
             city = "اصفهان"
@@ -132,11 +137,23 @@ def generate_docs():
                     }
                     yield doc
         except Exception as e:
-            print(f"Skipping {filename}: {e}")
+            print(f"Error reading {filename}: {e}")
 
 
 print("Indexing started...")
-start = time.time()
-success, _ = helpers.bulk(es, generate_docs())
-end = time.time()
-print(f"Indexed {success} documents in {end - start:.2f} seconds.")
+start_time = time.time()
+
+success, failed = helpers.bulk(es, generate_docs())
+
+end_time = time.time()
+elapsed_time = end_time - start_time
+
+print("\n" + "=" * 30)
+print("      INDEXING REPORT      ")
+print("=" * 30)
+print(f"Docs Indexed : {success}")
+print(f"Files Read   : {total_files_count}")
+print(f"Total Size   : {total_size_mb:.2f} MB")
+print(f"Time Taken   : {elapsed_time:.2f} seconds")
+print(f"Avg Speed    : {success / elapsed_time:.0f} docs/sec")
+print("=" * 30)
